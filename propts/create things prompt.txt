@@ -1,0 +1,8 @@
+static/cocktails.json is a file containing cocktail names and ingredients required to make cocktails.
+Using the file I want to create an app that has a tag style autocomplete text field, which can take names of cocktail ingredients.
+Then based on the given ingredients lists the full cocktail recipes that can be made from those ingredients.
+Add some basic styling using next modules.
+Use typescript
+
+at this point if I select more ingredients the app queries the cocktails that contain both, but I want it to query either
+what changes do I have to make

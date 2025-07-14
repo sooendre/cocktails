@@ -1,0 +1,561 @@
+{
+  "summary": {
+    "totalCocktails": 80,
+    "totalUniqueIngredients": 71,
+    "averageIngredientsPerCocktail": 3.65,
+    "totalIngredientInstances": 292
+  },
+  "uniqueIngredients": [
+    "Absinthe",
+    "Agave nectar",
+    "Angostura bitters",
+    "Aperol",
+    "Apricot brandy",
+    "Blackberry liqueur",
+    "Blue Curaçao",
+    "Cachaca",
+    "Calvados",
+    "Campari",
+    "Champagne",
+    "Cherry liqueur",
+    "Citron Vodka",
+    "Coconut milk",
+    "Coffee",
+    "Coffee liqueur",
+    "Cognac",
+    "Cola",
+    "Cranberry juice",
+    "Cream",
+    "Cream liqueur",
+    "Crème de violette",
+    "Créme de Cacao",
+    "Créme de Cassis",
+    "Créme de Menthe",
+    "DOM Bénédictine",
+    "Dark rum",
+    "DiSaronno",
+    "Drambuie",
+    "Dry White Wine",
+    "Egg white",
+    "Egg yolk",
+    "Galliano",
+    "Gin",
+    "Ginger Ale",
+    "Ginger beer",
+    "Grapefruit juice",
+    "Honey",
+    "Kirsch",
+    "Lemon juice",
+    "Lillet Blonde",
+    "Lime",
+    "Lime juice",
+    "Mint",
+    "Olive juice",
+    "Orange bitters",
+    "Orange flower water",
+    "Orange juice",
+    "Peach bitters",
+    "Peach puree",
+    "Peach schnapps",
+    "Peychaud’s bitters",
+    "Pineapple juice",
+    "Pisco",
+    "Prosecco",
+    "Raspberry liqueur",
+    "Raspberry syrup",
+    "Red Port",
+    "Soda water",
+    "Sparkling Wine",
+    "Sugar",
+    "Syrup",
+    "Tequila",
+    "Tomato juice",
+    "Triple Sec",
+    "Vanilla extract",
+    "Vermouth",
+    "Vodka",
+    "Whiskey",
+    "White rum",
+    "Worcestershire Sauce"
+  ],
+  "categorizedIngredients": {
+    "spirits": [
+      "Absinthe",
+      "Apricot brandy",
+      "Cachaca",
+      "Citron Vodka",
+      "Cognac",
+      "Dark rum",
+      "Gin",
+      "Ginger Ale",
+      "Ginger beer",
+      "Pisco",
+      "Tequila",
+      "Vodka",
+      "Whiskey",
+      "White rum"
+    ],
+    "liqueurs": [
+      "Aperol",
+      "Blackberry liqueur",
+      "Blue Curaçao",
+      "Campari",
+      "Cherry liqueur",
+      "Coffee liqueur",
+      "Cream liqueur",
+      "Crème de violette",
+      "Créme de Cacao",
+      "Créme de Cassis",
+      "Créme de Menthe",
+      "DOM Bénédictine",
+      "DiSaronno",
+      "Drambuie",
+      "Galliano",
+      "Prosecco",
+      "Raspberry liqueur",
+      "Triple Sec"
+    ],
+    "juices": [
+      "Cranberry juice",
+      "Grapefruit juice",
+      "Lemon juice",
+      "Lime juice",
+      "Olive juice",
+      "Orange juice",
+      "Peach puree",
+      "Pineapple juice",
+      "Tomato juice"
+    ],
+    "syrups": [
+      "Agave nectar",
+      "Honey",
+      "Raspberry syrup",
+      "Syrup"
+    ],
+    "bitters": [
+      "Angostura bitters",
+      "Orange bitters",
+      "Peach bitters",
+      "Peychaud’s bitters"
+    ],
+    "garnishes": [
+      "Lime",
+      "Mint"
+    ],
+    "mixers": [
+      "Champagne",
+      "Coconut milk",
+      "Coffee",
+      "Cola",
+      "Cream",
+      "Dry White Wine",
+      "Orange flower water",
+      "Soda water",
+      "Sparkling Wine"
+    ],
+    "other": [
+      "Calvados",
+      "Egg white",
+      "Egg yolk",
+      "Kirsch",
+      "Lillet Blonde",
+      "Peach schnapps",
+      "Red Port",
+      "Sugar",
+      "Vanilla extract",
+      "Vermouth",
+      "Worcestershire Sauce"
+    ]
+  },
+  "mostCommonIngredients": [
+    {
+      "ingredient": "Gin",
+      "count": 21
+    },
+    {
+      "ingredient": "Syrup",
+      "count": 20
+    },
+    {
+      "ingredient": "Lemon juice",
+      "count": 18
+    },
+    {
+      "ingredient": "Lime juice",
+      "count": 17
+    },
+    {
+      "ingredient": "Vodka",
+      "count": 16
+    },
+    {
+      "ingredient": "Triple Sec",
+      "count": 13
+    },
+    {
+      "ingredient": "White rum",
+      "count": 11
+    },
+    {
+      "ingredient": "Orange juice",
+      "count": 10
+    },
+    {
+      "ingredient": "Cognac",
+      "count": 9
+    },
+    {
+      "ingredient": "Vermouth",
+      "count": 7
+    },
+    {
+      "ingredient": "Whiskey",
+      "count": 7
+    },
+    {
+      "ingredient": "Angostura bitters",
+      "count": 7
+    },
+    {
+      "ingredient": "Sugar",
+      "count": 7
+    },
+    {
+      "ingredient": "Cherry liqueur",
+      "count": 6
+    },
+    {
+      "ingredient": "Soda water",
+      "count": 6
+    },
+    {
+      "ingredient": "Pineapple juice",
+      "count": 6
+    },
+    {
+      "ingredient": "Cream",
+      "count": 6
+    },
+    {
+      "ingredient": "Tequila",
+      "count": 5
+    },
+    {
+      "ingredient": "Dark rum",
+      "count": 4
+    },
+    {
+      "ingredient": "Egg white",
+      "count": 4
+    }
+  ],
+  "statistics": {
+    "totalIngredients": 292,
+    "ingredientFrequency": {
+      "Gin": 21,
+      "Vodka": 16,
+      "Lillet Blonde": 1,
+      "White rum": 11,
+      "Lime juice": 17,
+      "Syrup": 20,
+      "Campari": 2,
+      "Vermouth": 7,
+      "Kirsch": 1,
+      "Whiskey": 7,
+      "Angostura bitters": 7,
+      "Sugar": 7,
+      "Absinthe": 3,
+      "Cherry liqueur": 6,
+      "Orange bitters": 2,
+      "Soda water": 6,
+      "Mint": 3,
+      "Cognac": 9,
+      "Ginger Ale": 1,
+      "Dark rum": 4,
+      "Orange juice": 10,
+      "Pineapple juice": 6,
+      "Lemon juice": 18,
+      "Cranberry juice": 3,
+      "Grapefruit juice": 2,
+      "Pisco": 1,
+      "Egg white": 4,
+      "Tequila": 5,
+      "Triple Sec": 13,
+      "Cola": 2,
+      "Raspberry syrup": 1,
+      "Apricot brandy": 2,
+      "Calvados": 1,
+      "Champagne": 3,
+      "Red Port": 1,
+      "Egg yolk": 1,
+      "Coffee liqueur": 4,
+      "Coffee": 2,
+      "Galliano": 4,
+      "Coconut milk": 1,
+      "Crème de violette": 1,
+      "Prosecco": 2,
+      "Peach puree": 1,
+      "Créme de Cacao": 2,
+      "Créme de Menthe": 2,
+      "Cream": 6,
+      "Drambuie": 1,
+      "Cream liqueur": 1,
+      "DiSaronno": 3,
+      "Aperol": 1,
+      "Blackberry liqueur": 1,
+      "Citron Vodka": 2,
+      "Raspberry liqueur": 1,
+      "Tomato juice": 2,
+      "Worcestershire Sauce": 2,
+      "Sparkling Wine": 2,
+      "Peach schnapps": 1,
+      "Peach bitters": 1,
+      "Peychaud’s bitters": 1,
+      "DOM Bénédictine": 1,
+      "Ginger beer": 2,
+      "Lime": 2,
+      "Dry White Wine": 1,
+      "Créme de Cassis": 2,
+      "Agave nectar": 1,
+      "Olive juice": 1,
+      "Orange flower water": 1,
+      "Vanilla extract": 1,
+      "Cachaca": 1,
+      "Honey": 1,
+      "Blue Curaçao": 1
+    },
+    "unitTypes": [
+      "cl",
+      "2 drops"
+    ],
+    "amountTypes": [
+      "number",
+      "string",
+      "special"
+    ],
+    "averageIngredientsPerCocktail": 3.65
+  },
+  "sampleStructures": [
+    {
+      "cocktailName": "Vesper",
+      "ingredients": [
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Gin"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Vodka"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 0.75,
+            "ingredient": "Lillet Blonde"
+          }
+        }
+      ]
+    },
+    {
+      "cocktailName": "Bacardi",
+      "ingredients": [
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "White rum",
+            "label": "Bacardi White Rum"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Lime juice"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Syrup",
+            "label": "Grenadine"
+          }
+        }
+      ]
+    },
+    {
+      "cocktailName": "Negroni",
+      "ingredients": [
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Gin"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Campari"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 3,
+            "ingredient": "Vermouth",
+            "label": "Sweet red vermouth"
+          }
+        }
+      ]
+    },
+    {
+      "cocktailName": "Rose",
+      "ingredients": [
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Kirsch"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 4,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label"
+          ],
+          "example": {
+            "amount": "3 dashes",
+            "ingredient": "Strawberry syrup",
+            "label": "Strawberry syrup"
+          }
+        }
+      ]
+    },
+    {
+      "cocktailName": "Old Fashioned",
+      "ingredients": [
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label",
+            "unit"
+          ],
+          "example": {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Whiskey",
+            "label": "Bourbon or rye whiskey"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient"
+          ],
+          "example": {
+            "ingredient": "Angostura bitters",
+            "amount": "2 dashes"
+          }
+        },
+        {
+          "structure": [
+            "amount",
+            "ingredient",
+            "label"
+          ],
+          "example": {
+            "ingredient": "Sugar",
+            "amount": "1",
+            "label": "Sugar cube"
+          }
+        },
+        {
+          "structure": [
+            "special"
+          ],
+          "example": {
+            "special": "Few dashes plain water"
+          }
+        }
+      ]
+    }
+  ]
+}

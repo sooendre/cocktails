@@ -1,95 +1,114 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useState, useEffect } from 'react';
+import styles from './page.module.css';
+import IngredientAutocomplete from '@/components/IngredientAutocomplete';
+import CocktailList from '@/components/CocktailList';
+import { Cocktail } from '@/types/cocktail';
+import { extractUniqueIngredients, findCocktailsByAnyIngredient } from '@/utils/cocktail-utils';
 
 export default function Home() {
+  const [cocktails, setCocktails] = useState<Cocktail[]>([]);
+  const [ingredients, setIngredients] = useState<string[]>([]);
+  const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
+  const [filteredCocktails, setFilteredCocktails] = useState<Cocktail[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load cocktails data on component mount
+  useEffect(() => {
+    const loadCocktails = async () => {
+      try {
+        const response = await fetch('/static/cocktails.json');
+        if (!response.ok) {
+          throw new Error('Failed to load cocktails data');
+        }
+        const cocktailsData: Cocktail[] = await response.json();
+        setCocktails(cocktailsData);
+        setFilteredCocktails(cocktailsData);
+
+        const uniqueIngredients = extractUniqueIngredients(cocktailsData);
+        setIngredients(uniqueIngredients);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCocktails();
+  }, []);
+
+
+  // Filter cocktails when selected ingredients change
+  useEffect(() => {
+    const filtered = findCocktailsByAnyIngredient(cocktails, selectedIngredients);
+    setFilteredCocktails(filtered);
+  }, [cocktails, selectedIngredients]);
+
+  if (loading) {
+    return (
+      <div className={styles.page}>
+        <div className={styles.loadingSpinner}>
+          <div className={styles.spinner}></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.page}>
+        <div className={styles.error}>
+          Error: {error}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Cocktail Finder</h1>
+        <p className={styles.subtitle}>
+          Discover cocktails you can make with the ingredients you have.
+          Search and select ingredients to find perfect cocktail recipes.
+        </p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.stats}>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>{cocktails.length}</span>
+            <span className={styles.statLabel}>Cocktails</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>{ingredients.length}</span>
+            <span className={styles.statLabel}>Ingredients</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNumber}>{filteredCocktails.length}</span>
+            <span className={styles.statLabel}>Matches</span>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+
+      <section className={styles.searchSection}>
+        <label className={styles.searchLabel}>
+          Select your ingredients:
+        </label>
+        <IngredientAutocomplete
+          ingredients={ingredients}
+          selectedIngredients={selectedIngredients}
+          onSelectionChange={setSelectedIngredients}
+          placeholder="Type to search for ingredients..."
+        />
+      </section>
+
+      <section className={styles.resultsSection}>
+        <CocktailList
+          cocktails={filteredCocktails}
+          selectedIngredients={selectedIngredients}
+        />
+      </section>
     </div>
   );
 }
